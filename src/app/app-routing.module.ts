@@ -9,6 +9,7 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 import { NotFoundComponent } from './pages/miscellaneous/not-found/not-found.component';
+import { LandingPageComponent } from './landing/landingpage.component';
 
 export const routes: Routes = [
   {
@@ -48,6 +49,7 @@ export const routes: Routes = [
   },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent, },
+  { path: '/prueba', component: LandingPageComponent, },
 ];
 
 const config: ExtraOptions = {
