@@ -10,6 +10,7 @@ import {
   NbButtonModule,
   NbSelectModule,
   NbIconModule,
+  NbCardModule,
   NbThemeModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
@@ -31,12 +32,13 @@ import {
   OneColumnLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
+  OneColumnLandingLayoutComponent,
 } from './layouts';
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { DARK_THEME } from './styles/theme.dark';
-
+import { HeaderLandingPageComponent } from "./components/header-landingpage/header-landingpage.component"
 const NB_MODULES = [
   NbLayoutModule,
   NbMenuModule,
@@ -49,6 +51,7 @@ const NB_MODULES = [
   NbSelectModule,
   NbIconModule,
   NbEvaIconsModule,
+  NbCardModule,
 ];
 const COMPONENTS = [
   HeaderComponent,
@@ -57,6 +60,8 @@ const COMPONENTS = [
   OneColumnLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
+  HeaderLandingPageComponent,
+  OneColumnLandingLayoutComponent,
 ];
 const PIPES = [
   CapitalizePipe,

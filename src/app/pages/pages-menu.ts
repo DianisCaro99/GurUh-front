@@ -44,11 +44,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/forms/inputs',
   },
   {
-    title: 'Cerrar sesión',
-    icon: 'close-outline',
-    link: '/pages/dashboard',
-  },
-  {
     title: 'Chat (próximamente)',
     icon: 'message-circle-outline',
     link: '/pages/extra-components/chat',
