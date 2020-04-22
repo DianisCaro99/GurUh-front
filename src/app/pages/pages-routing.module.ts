@@ -33,6 +33,11 @@ const routes: Routes = [{
         .then(m => m.ExtraComponentsModule),
     },
     {
+      path: 'landing',
+      loadChildren: () => import('./landing/landingpage.module')
+        .then(m => m.LandingPageModule),
+    },
+    {
       path: 'charts',
       loadChildren: () => import('./charts/charts.module')
         .then(m => m.ChartsModule),
@@ -45,7 +50,7 @@ const routes: Routes = [{
 
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'charts',
       pathMatch: 'full',
     },
     {

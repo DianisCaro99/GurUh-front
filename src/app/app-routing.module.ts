@@ -9,16 +9,11 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 import { NotFoundComponent } from './pages/miscellaneous/not-found/not-found.component';
-import { LandingPageComponent } from './landing/landingpage.component';
+import { LandingPageComponent } from './pages/landing/landingpage.component';
 
 export const routes: Routes = [
   
-  {
-    path: 'pages',
-    loadChildren: () => import('./pages/pages.module')
-      .then(m => m.PagesModule),
-  },
-  { path: 'prueba', component: LandingPageComponent },
+  
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -50,8 +45,11 @@ export const routes: Routes = [
     ],
   },
   
-  { path: '', redirectTo: 'pages', pathMatch: 'full'},
-   
+  {
+    path: '',
+    loadChildren: () => import('./pages/pages.module')
+      .then(m => m.PagesModule),
+  },
   { path: '**', component: NotFoundComponent, },
   
 ];
