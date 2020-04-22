@@ -5,7 +5,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Landing page',
     icon: 'edit-2-outline',
     link: '/landing',
-    
+
   },
   {
     title: 'Descubre afinidades',
@@ -13,58 +13,27 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/tables/smart-table',
     home: true
   },
-  
- 
+
   {
-    title: 'Calendario de actividades',
-    icon: 'calendar-outline',
-    link: '/extra-components/calendar',
-  },
-  {
-        title: 'Intereses',
-        icon: 'pie-chart-outline',
-        link: '/charts/chartjs',
-      },
-  {
-    title: 'Conoce a nuestros gurUhs',
+    title: 'Encuentra tu GurUh',
     icon: 'grid-outline',
     link: '/extra-components/alert',
   },
   {
-    title: 'Evalua tus opciones',
+    title: 'Recomendaciónes',
     icon: 'book-open-outline',
     link: '/tables/smart-table',
   },
+
   {
-    title: 'Configuración de cuenta',
-    icon: 'options-outline',
-    link: '/forms/inputs',
+    title: 'Calendario (próximamente)',
+    icon: 'calendar-outline',
+    link: '/extra-components/calendar',
   },
   {
     title: 'Chat (próximamente)',
     icon: 'message-circle-outline',
     link: '/extra-components/chat',
   },
-  {
-    title: 'Auth',
-    icon: 'lock-outline',
-    children: [
-      {
-        title: 'Login',
-        link: '/auth/login',
-      },
-      {
-        title: 'Register',
-        link: '/auth/register',
-      },
-      {
-        title: 'Request Password',
-        link: '/auth/request-password',
-      },
-      {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
-      },
-    ],
-  },
+  
 ];

@@ -44,7 +44,10 @@ export const routes: Routes = [
       },
     ],
   },
-  
+  {
+    path: 'prueba',
+    component: LandingPageComponent,
+  },
   {
     path: '',
     loadChildren: () => import('./pages/pages.module')
