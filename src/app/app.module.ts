@@ -11,6 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {ContentDataService} from './services/content.data.service';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -42,6 +43,9 @@ import {
     ThemeModule.forRoot(),
   ],
   bootstrap: [AppComponent],
+  providers:[
+    ContentDataService,
+  ]
 })
 export class AppModule {
 }

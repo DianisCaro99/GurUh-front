@@ -8,6 +8,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
 
   },
   {
+    title: 'Intereses',
+    icon: 'edit-2-outline',
+    link: '/charts/chartjs',
+
+  },
+  {
     title: 'Descubre afinidades',
     icon: 'edit-2-outline',
     link: '/tables/smart-table',

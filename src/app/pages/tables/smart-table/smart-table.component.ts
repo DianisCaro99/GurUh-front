@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { SmartTableData } from '../../../@core/data/smart-table';
+import { ContentDataService } from '../../../services/content.data.service';
 
 @Component({
   selector: 'ngx-smart-table',
   templateUrl: './smart-table.component.html',
   styleUrls: ['./smart-table.component.scss'],
 })
-export class SmartTableComponent {
+export class SmartTableComponent implements OnInit{
+  ngOnInit(){
+    console.log('entra acá')
 
+    this.contentService.getContents()
+    .subscribe( (res)=>{console.log(res)})
+  };
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -31,7 +37,7 @@ export class SmartTableComponent {
         type: 'number',
       },
       firstName: {
-        title: 'First Name',
+        title: 'Si es este',
         type: 'string',
       },
       lastName: {
@@ -55,9 +61,10 @@ export class SmartTableComponent {
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: SmartTableData) {
+  constructor(private service: SmartTableData, private contentService: ContentDataService) {
     const data = this.service.getData();
     this.source.load(data);
+    
   }
 
   onDeleteConfirm(event): void {

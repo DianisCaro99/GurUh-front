@@ -17,4 +17,4 @@ import { ContentListRoutingModule, routedComponents } from './content-list-routi
     ...routedComponents,
   ],
 })
-export class TablesModule { }
+export class ContentListModule { }
