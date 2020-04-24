@@ -1,21 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
+import { Component, OnInit } from "@angular/core";
+import { LocalDataSource } from "ng2-smart-table";
 
-import { SmartTableData } from '../../../@core/data/smart-table';
-import { ContentDataService } from '../../../services/content.data.service';
+import { SmartTableData } from "../../../@core/data/smart-table";
+import { ContentDataService } from "../../../services/content.data.service";
 
 @Component({
-  selector: 'ngx-smart-table',
-  templateUrl: './smart-table.component.html',
-  styleUrls: ['./smart-table.component.scss'],
+  selector: "ngx-smart-table",
+  templateUrl: "./smart-table.component.html",
+  styleUrls: ["./smart-table.component.scss"],
 })
-export class SmartTableComponent implements OnInit{
-  ngOnInit(){
-    console.log('entra acá')
+export class SmartTableComponent implements OnInit {
+  ngOnInit() {
+    console.log("entra acá");
 
-    this.contentService.getContents()
-    .subscribe( (res)=>{console.log(res)})
-  };
+    this.contentService
+      .getContents()
+      .toPromise()
+      .then((res) => {
+        console.log(res["data"]["data"]);
+      });
+  }
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -32,43 +36,49 @@ export class SmartTableComponent implements OnInit{
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
+      _id: {
+        title: "Id",
+        type: "String",
       },
-      firstName: {
-        title: 'Si es este',
-        type: 'string',
+      name: {
+        title: "nombre",
+        type: "string",
       },
-      lastName: {
-        title: 'Last Name',
-        type: 'string',
+      category: {
+        title: "Categoría",
+        type: "string",
       },
-      username: {
-        title: 'Username',
-        type: 'string',
+      description: {
+        title: "Descripción",
+        type: "string",
       },
-      email: {
-        title: 'E-mail',
-        type: 'string',
+      type: {
+        title: "Tipo",
+        type: "string",
       },
-      age: {
-        title: 'Age',
-        type: 'number',
+      url: {
+        title: "Url",
+        type: "string",
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: SmartTableData, private contentService: ContentDataService) {
-    const data = this.service.getData();
-    this.source.load(data);
-    
+  constructor(
+    private service: SmartTableData,
+    private contentService: ContentDataService
+  ) {
+    this.contentService
+      .getContents()
+      .toPromise()
+      .then((res) => {
+        this.source.load(res["data"]["data"]);
+      });
   }
 
   onDeleteConfirm(event): void {
-    if (window.confirm('Are you sure you want to delete?')) {
+    if (window.confirm("Are you sure you want to delete?")) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
