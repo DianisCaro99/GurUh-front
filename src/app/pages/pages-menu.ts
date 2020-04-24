@@ -1,45 +1,53 @@
-import { NbMenuItem } from '@nebular/theme';
+import { NbMenuItem } from "@nebular/theme";
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Landing page',
-    icon: 'edit-2-outline',
-    link: '/landing',
+    title: "Inicio",
+    icon: "home-outline",
+    link: "/inicio",
+  },
+  {
+    title: "Afinidades",
+    icon: "edit-outline",
+    link: "/descubre",
+    children: [
+      {
+        title: "Descubre",
+        icon: "plus-circle-outline",
+        link: "/descubre",
+      },
+      {
+        title: "Favoritas",
+        icon: "star-outline",
+        link: "/favoritas",
+      },
+    ],
+  },
+  {
+    title: "Guruhs",
+    icon: "people-outline",
+    link: "/guruhs",
+    home: true,
+  },
+  {
+    title: "Recomendaciones (Beta)",
+    icon: "bulb-outline",
+    link: "/recomendaciones",
+  },
+  {
+    title: "Estadísticas (Próximamente)",
+    icon: "pie-chart-outline",
+    link: "/estadisticas",
+  },
 
+  {
+    title: "Calendario (Próximamente)",
+    icon: "calendar-outline",
+    link: "/calendario",
   },
   {
-    title: 'Intereses',
-    icon: 'edit-2-outline',
-    link: '/charts/chartjs',
-
+    title: "Chat (próximamente)",
+    icon: "message-circle-outline",
+    link: "/chat",
   },
-  {
-    title: 'Descubre afinidades',
-    icon: 'edit-2-outline',
-    link: '/tables/smart-table',
-    home: true
-  },
-
-  {
-    title: 'Encuentra tu GurUh',
-    icon: 'grid-outline',
-    link: '/extra-components/alert',
-  },
-  {
-    title: 'Recomendaciónes',
-    icon: 'book-open-outline',
-    link: '/tables/smart-table',
-  },
-
-  {
-    title: 'Calendario (próximamente)',
-    icon: 'calendar-outline',
-    link: '/extra-components/calendar',
-  },
-  {
-    title: 'Chat (próximamente)',
-    icon: 'message-circle-outline',
-    link: '/extra-components/chat',
-  },
-  
 ];

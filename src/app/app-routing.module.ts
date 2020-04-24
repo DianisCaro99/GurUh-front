@@ -1,5 +1,5 @@
-import { ExtraOptions, RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { ExtraOptions, RouterModule, Routes } from "@angular/router";
+import { NgModule } from "@angular/core";
 import {
   NbAuthComponent,
   NbLoginComponent,
@@ -7,54 +7,51 @@ import {
   NbRegisterComponent,
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
-} from '@nebular/auth';
-import { NotFoundComponent } from './pages/miscellaneous/not-found/not-found.component';
-import { LandingPageComponent } from './pages/landing/landingpage.component';
+} from "@nebular/auth";
+import { NotFoundComponent } from "./pages/miscellaneous/not-found/not-found.component";
+import { LandingPageComponent } from "./pages/landing/landingpage.component";
 
 export const routes: Routes = [
-  
-  
   {
-    path: 'auth',
+    path: "auth",
     component: NbAuthComponent,
     children: [
       {
-        path: '',
+        path: "",
         component: NbLoginComponent,
       },
       {
-        path: 'login',
+        path: "login",
         component: NbLoginComponent,
       },
       {
-        path: 'register',
+        path: "register",
         component: NbRegisterComponent,
       },
       {
-        path: 'logout',
+        path: "logout",
         component: NbLogoutComponent,
       },
       {
-        path: 'request-password',
+        path: "request-password",
         component: NbRequestPasswordComponent,
       },
       {
-        path: 'reset-password',
+        path: "reset-password",
         component: NbResetPasswordComponent,
       },
     ],
   },
   {
-    path: 'prueba',
+    path: "prueba",
     component: LandingPageComponent,
   },
   {
-    path: '',
-    loadChildren: () => import('./pages/pages.module')
-      .then(m => m.PagesModule),
+    path: "",
+    loadChildren: () =>
+      import("./pages/pages.module").then((m) => m.PagesModule),
   },
-  { path: '**', component: NotFoundComponent, },
-  
+  { path: "**", component: NotFoundComponent },
 ];
 
 const config: ExtraOptions = {
@@ -65,5 +62,4 @@ const config: ExtraOptions = {
   imports: [RouterModule.forRoot(routes, config)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

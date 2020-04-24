@@ -65,10 +65,7 @@ export class SmartTableComponent implements OnInit {
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(
-    private service: SmartTableData,
-    private contentService: ContentDataService
-  ) {
+  constructor(private contentService: ContentDataService) {
     this.contentService
       .getContents()
       .toPromise()
