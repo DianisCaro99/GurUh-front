@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ngx-recomendaciones',
+  styleUrls: ['./recomendaciones.component.scss'],
   templateUrl: './recomendaciones.component.html',
-  styleUrls: ['./recomendaciones.component.scss']
 })
-export class RecomendacionesComponent implements OnInit {
+export class RecomendacionesComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  starRate = 2;
+  heartRate = 4;
+  radioGroupValue = 'This is value 2';
 }

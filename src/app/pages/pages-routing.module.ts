@@ -8,10 +8,10 @@ import { InicioComponent } from "./inicio/inicio.component";
 import { DescubreComponent } from "./descubre/descubre.component";
 import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
-import { RecomendacionesComponent } from "./recomendaciones/recomendaciones.component";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
 import { ChatComponent } from "./chat/chat.component";
+import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 const routes: Routes = [
   {
     path: "",
@@ -81,7 +81,7 @@ const routes: Routes = [
       },
       {
         path: "recomendaciones",
-        component: RecomendacionesComponent,
+        component: RecomendacionesComponent
       },
       {
         path: "estadisticas",

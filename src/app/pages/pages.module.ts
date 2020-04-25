@@ -9,10 +9,10 @@ import { InicioComponent } from "./inicio/inicio.component";
 import { DescubreComponent } from "./descubre/descubre.component";
 import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
-import { RecomendacionesComponent } from "./recomendaciones/recomendaciones.component";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
 import { ChatComponent } from "./chat/chat.component";
+import { RecomendacionesModule } from './recomendaciones/recomendaciones.module';
 
 @NgModule({
   imports: [
@@ -20,6 +20,7 @@ import { ChatComponent } from "./chat/chat.component";
     ThemeModule,
     NbMenuModule,
     ECommerceModule,
+    RecomendacionesModule,
     MiscellaneousModule,
   ],
   declarations: [
@@ -28,7 +29,6 @@ import { ChatComponent } from "./chat/chat.component";
     DescubreComponent,
     FavoritasComponent,
     GuruhsComponent,
-    RecomendacionesComponent,
     EstadisticasComponent,
     CalendarioComponent,
     ChatComponent,
