@@ -1,17 +1,37 @@
-<div >
- 
-<h1>Sabías que?...</h1>
-<p>Los colombianos entre 16 y 24 años son los terceros en el mundo que más usan redes sociales al día?
-  En promedio usamos las redes 4 horas y 12 minutos.
-</p>
+<div>
 
-    <nb-card>
-      <nb-card-header>Quizá tu perfil de twitter sea una buena forma de empezar porque puede decirnos algo sobre tus gustos y tus intereses :)</nb-card-header>
-      <nb-card-body>
-        <input type="text" nbInput fullWidth status="info"  placeholder="Ingresa tu twitter username">
-        <button>Enviar</button>
-      </nb-card-body>
-    </nb-card>
-    <div *ngIF></div>
-   
-  </div>
+  <h1>Sabías que?...</h1>
+  <p>Los colombianos entre 16 y 24 años son los terceros en el mundo que más usan redes sociales al día?
+    En promedio usamos las redes 4 horas y 12 minutos.
+  </p>
+
+  <nb-card>
+    <nb-card-header>Quizá tu perfil de twitter sea una buena forma de empezar porque puede decirnos algo sobre tus
+      gustos y tus intereses :)</nb-card-header>
+    <nb-card-body>
+      <input type="text" nbInput fullWidth status="info" placeholder="Ingresa tu username de twitter (debe ser público) " #username>
+      <button nbButton status="danger" hero (click)="recomendacionClick($event)">
+        Enviar
+      </button>
+    </nb-card-body>
+
+    <nb-card-body *ngIf="this.recomendacion">
+      Tu personalidad según nuestro modelo: 
+      <br>
+      <br>
+      Openness: {{this.recomendacion["Openness"].toFixed(2)}}
+      <br>
+      Conscientiousness: {{this.recomendacion["Conscientiousness"].toFixed(2)}}
+      <br>
+      Extraversion: {{this.recomendacion["Extraversion"].toFixed(2)}}
+      <br>
+      Agreeableness: {{this.recomendacion["Agreeableness"].toFixed(2)}}
+      <br>
+      Neuroticism: {{this.recomendacion["Neuroticism"].toFixed(2)}}
+      <br>
+      <br>
+      Nuestra recomendacion:      {{this.recomendacion["predict"]}}
+    </nb-card-body>
+
+  </nb-card>
+</div>

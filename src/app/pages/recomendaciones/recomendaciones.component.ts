@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { RecomendacionesDataService } from '../../services/recomendacion.data.service';
 
 @Component({
   selector: 'ngx-recomendaciones',
@@ -6,8 +7,21 @@ import { Component } from '@angular/core';
   templateUrl: './recomendaciones.component.html',
 })
 export class RecomendacionesComponent {
+  recomendacion = null
+  constructor(private recomService: RecomendacionesDataService) {
 
-  starRate = 2;
-  heartRate = 4;
-  radioGroupValue = 'This is value 2';
+  }
+  @ViewChild("username") username: ElementRef;
+  recomendacionClick(event) {
+
+    console.log(this.username.nativeElement.value)
+    this.recomService.getRecomendaciones(this.username.nativeElement.value)
+      .toPromise()
+      .then((res) => {
+        console.log(res );
+        this.recomendacion = res
+      }
+      )
+  }
+
 }

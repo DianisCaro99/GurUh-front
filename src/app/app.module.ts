@@ -12,6 +12,7 @@ import { ThemeModule } from "./@theme/theme.module";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { ContentDataService } from "./services/content.data.service";
+
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -21,6 +22,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from "@nebular/theme";
+import { RecomendacionesDataService } from './services/recomendacion.data.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,6 +44,6 @@ import {
     ThemeModule.forRoot(),
   ],
   bootstrap: [AppComponent],
-  providers: [ContentDataService],
+  providers: [ContentDataService,RecomendacionesDataService],
 })
 export class AppModule {}
