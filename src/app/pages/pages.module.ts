@@ -5,8 +5,6 @@ import { PagesComponent } from "./pages.component";
 import { ECommerceModule } from "./e-commerce/e-commerce.module";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { MiscellaneousModule } from "./miscellaneous/miscellaneous.module";
-import { DescubreComponent } from "./descubre/descubre.component";
-import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
@@ -27,8 +25,6 @@ import { InicioModule } from './inicio/inicio.module';
   ],
   declarations: [
     PagesComponent,
-    DescubreComponent,
-    FavoritasComponent,
     GuruhsComponent,
     EstadisticasComponent,
     CalendarioComponent,
