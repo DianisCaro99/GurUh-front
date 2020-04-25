@@ -1,1 +1,38 @@
-<p>calendario works!</p>
+<nb-card accent="danger">
+    <nb-card-header>
+        En Guruh contamos con estudiantes vinculados a 11 facultades académicas
+        de diferentes universidades del país que te apoyarán en este proceso. Próximamente podrás 
+        comunicarte con ellos dentro de nuestra plataforma, ofreciéndote un lugar seguro mientras 
+        te informas para tomar la decisión más importante de tu vida.
+    </nb-card-header>
+  </nb-card>
+  <nb-layout>
+        <nb-layout-column class="small">
+          <nb-calendar size = "large" [(date)]="date" [dayCellComponent]="dayCellComponent"></nb-calendar>
+        </nb-layout-column>
+
+          <nb-layout-column class="small">
+              <nb-card>
+              <nb-card-header>
+                Selected date: {{ date | date }}
+            </nb-card-header>
+              <nb-card-body>
+                A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                Originally, nebula was a name for any diffuse astronomical object,
+                including galaxies beyond the Milky Way.
+              </nb-card-body>
+            </nb-card>
+
+            <nb-card>
+              <nb-card-header>
+                Selected date: {{ date | date }}
+            </nb-card-header>
+              <nb-card-body>
+                A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                Originally, nebula was a name for any diffuse astronomical object,
+                including galaxies beyond the Milky Way.
+              </nb-card-body>
+            </nb-card>
+          </nb-layout-column>
+        </nb-layout>
+
