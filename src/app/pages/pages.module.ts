@@ -11,11 +11,8 @@ import { GuruhsModule } from "./guruhs/guruhs.module";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { RecomendacionesModule } from './recomendaciones/recomendaciones.module';
 import { ChatFinalModule } from './chat/chat.module';
-<<<<<<< HEAD
 import { CalendarioModule } from './calendario/calendario.module';
-=======
 import { InicioModule } from './inicio/inicio.module';
->>>>>>> 518f0279a3d58eed1e636274fc2e93c9b7208087
 
 @NgModule({
   imports: [
@@ -26,12 +23,9 @@ import { InicioModule } from './inicio/inicio.module';
     RecomendacionesModule,
     MiscellaneousModule,
     ChatFinalModule,
-<<<<<<< HEAD
     CalendarioModule,
     GuruhsModule,
-=======
     InicioModule,
->>>>>>> 518f0279a3d58eed1e636274fc2e93c9b7208087
   ],
   declarations: [
     PagesComponent,
