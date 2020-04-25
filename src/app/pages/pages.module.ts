@@ -11,8 +11,8 @@ import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
-import { ChatComponent } from "./chat/chat.component";
 import { RecomendacionesModule } from './recomendaciones/recomendaciones.module';
+import { ChatFinalModule } from './chat/chat.module';
 
 @NgModule({
   imports: [
@@ -22,6 +22,7 @@ import { RecomendacionesModule } from './recomendaciones/recomendaciones.module'
     ECommerceModule,
     RecomendacionesModule,
     MiscellaneousModule,
+    ChatFinalModule,
   ],
   declarations: [
     PagesComponent,
@@ -31,7 +32,6 @@ import { RecomendacionesModule } from './recomendaciones/recomendaciones.module'
     GuruhsComponent,
     EstadisticasComponent,
     CalendarioComponent,
-    ChatComponent,
   ],
 })
 export class PagesModule {}

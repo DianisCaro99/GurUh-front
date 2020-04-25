@@ -1,1 +1,27 @@
-<p>chat works!</p>
+<nb-card>
+  <nb-card accent="danger">
+    <nb-card-header>
+        En Guruh contamos con estudiantes vinculados a 11 facultades académicas
+        de diferentes universidades del país que te apoyarán en este proceso. Próximamente podrás 
+        comunicarte con ellos dentro de nuestra plataforma, ofreciéndote un lugar seguro mientras 
+        te informas para tomar la decisión más importante de tu vida.
+    </nb-card-header>
+  <nb-card-body>
+        <nb-chat title="GurUh" size="large" status="warning">
+          <nb-chat-message *ngFor="let msg of messages"
+                           [type]="msg.type"
+                           [message]="msg.text"
+                           [reply]="msg.reply"
+                           [sender]="msg.user.name"
+                           [date]="msg.date"
+                           [files]="msg.files"
+                           [quote]="msg.quote"
+                           [latitude]="msg.latitude"
+                           [longitude]="msg.longitude"
+                           [avatar]="msg.user.avatar">
+          </nb-chat-message>
+          <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
+          </nb-chat-form>
+        </nb-chat>
+  </nb-card-body>
+</nb-card>

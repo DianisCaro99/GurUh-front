@@ -4,7 +4,7 @@ import { ChatService } from './chat.service';
 
 @Component({
   selector: 'ngx-chat',
-  templateUrl: 'chat.component.html',
+  templateUrl: 'chatfinal.component.html',
   styleUrls: ['chat.component.scss'],
   providers: [ ChatService ],
 })
@@ -32,7 +32,7 @@ export class ChatComponent {
       type: files.length ? 'file' : 'text',
       files: files,
       user: {
-        name: 'Jonh Doe',
+        name: 'Nicolás P.',
         avatar: 'https://i.gifer.com/no.gif',
       },
     });

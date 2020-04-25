@@ -10,7 +10,7 @@ import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
-import { ChatComponent } from "./chat/chat.component";
+import { ChatComponentFinal } from "./chat/chat.component";
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 const routes: Routes = [
   {
@@ -93,7 +93,7 @@ const routes: Routes = [
       },
       {
         path: "chat",
-        component: ChatComponent,
+        component: ChatComponentFinal,
       },
       {
         path: "",
