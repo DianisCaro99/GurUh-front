@@ -5,7 +5,6 @@ import {
   NbButtonModule,
   NbCalendarKitModule,
   NbCalendarModule,
-  NbUserModule,
   NbCalendarRangeModule,
   NbCardModule,
   NbChatModule,
@@ -13,16 +12,16 @@ import {
   NbProgressBarModule,
   NbSelectModule,
   NbSpinnerModule,
-  NbListModule,
   NbTabsetModule,
+  NbLayoutModule,
 } from '@nebular/theme';
 
 import { ThemeModule } from '../../@theme/theme.module';
-import { ChatComponentFinal } from './chat.component';
+import { CalendarioComponent } from './calendario.component';
 
 
 const COMPONENTS = [
-  ChatComponentFinal,
+  CalendarioComponent,
 ];
 
 const MODULES = [
@@ -33,14 +32,13 @@ const MODULES = [
   NbCalendarKitModule,
   NbCalendarRangeModule,
   NbCardModule,
-  NbListModule,
   NbChatModule,
   NbIconModule,
-  NbUserModule,
   NbProgressBarModule,
   NbSelectModule,
   NbSpinnerModule,
   NbTabsetModule,
+  NbLayoutModule,
   ThemeModule,
 ];
 
@@ -52,4 +50,4 @@ const MODULES = [
     ...COMPONENTS,
   ],
 })
-export class ChatFinalModule { }
+export class CalendarioModule { }
