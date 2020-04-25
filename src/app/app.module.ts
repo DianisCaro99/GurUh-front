@@ -1,47 +1,95 @@
-/**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
+import {
+  HttpClientModule,
+  HttpHeaders,
+  HttpClientJsonpModule,
+} from "@angular/common/http";
 import { CoreModule } from "./@core/core.module";
 import { ThemeModule } from "./@theme/theme.module";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { ContentDataService } from "./services/content.data.service";
+import { DataService } from "./services/data.service";
 import {
-  NbChatModule,
-  NbDatepickerModule,
   NbDialogModule,
   NbMenuModule,
   NbSidebarModule,
   NbToastrModule,
   NbWindowModule,
+  NbCardModule,
+  NbButtonModule,
+  NbInputModule,
+  NbAlertModule,
+  NbLayoutModule,
+  NbIconModule,
+  NbCheckboxModule,
 } from "@nebular/theme";
+import { LoginComponent } from "./auth/login/login.component";
+import { SignupComponent } from "./auth/signup/signup.component";
+import { ForgotPasswordComponent } from "./auth/forgot-password/forgot-password.component";
+import { ResetPasswordComponent } from "./auth/reset-password/reset-password.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { InicioComponent } from "./pages/inicio/inicio.component";
+import { DescubreComponent } from "./pages/descubre/descubre.component";
+import { FavoritasComponent } from "./pages/favoritas/favoritas.component";
+import { ChatComponent } from "./pages/chat/chat.component";
+import { GuruhsComponent } from "./pages/guruhs/guruhs.component";
+import { EstadisticasComponent } from "./pages/estadisticas/estadisticas.component";
+import { RecomendacionesComponent } from "./pages/recomendaciones/recomendaciones.component";
+import { CalendarioComponent } from "./pages/calendario/calendario.component";
+import { NotFoundComponent } from "./notFound/not-found.component";
+import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
+import { AuthService } from "./services/auth.service";
+import { LoginGuardian } from "./services/loginGuardian.service";
+import { CuentaComponent } from "./cuenta/cuenta.component";
+import { Ng2SmartTableModule } from "ng2-smart-table";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    DashboardComponent,
+    InicioComponent,
+    DescubreComponent,
+    FavoritasComponent,
+    GuruhsComponent,
+    RecomendacionesComponent,
+    EstadisticasComponent,
+    CalendarioComponent,
+    ChatComponent,
+    NotFoundComponent,
+    CuentaComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     AppRoutingModule,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
-    NbDatepickerModule.forRoot(),
     NbDialogModule.forRoot(),
     NbWindowModule.forRoot(),
     NbToastrModule.forRoot(),
-    NbChatModule.forRoot({
-      messageGoogleMapKey: "AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY",
-    }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    NbLayoutModule,
+    NbIconModule,
+    NbCardModule,
+    NbButtonModule,
+    RouterModule,
+    FormsModule,
+    NbInputModule,
+    NbAlertModule,
+    NbCheckboxModule,
+    Ng2SmartTableModule,
   ],
   bootstrap: [AppComponent],
-  providers: [ContentDataService],
+  providers: [DataService, AuthService, LoginGuardian, LoginGuardian],
 })
 export class AppModule {}

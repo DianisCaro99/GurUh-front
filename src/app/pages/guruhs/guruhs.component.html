@@ -1,1 +1,17 @@
-<p>guruhs works!</p>
+<div class="row justify-content-center">
+  <h3 class="text-center mb-5">Guruhs</h3>
+  <div class="col-12 row bg-white m-auto">
+    <div
+      class="card rounded bg-light m-2"
+      *ngFor="let guruh of guruhs"
+      style="width: 23%;"
+    >
+      <div class="card-body">
+        <h6>
+          <b>{{ guruh.name }}</b>
+        </h6>
+        <p>{{ guruh.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { DataService } from "../../services/data.service";
 
 @Component({
-  selector: 'ngx-descubre',
-  templateUrl: './descubre.component.html',
-  styleUrls: ['./descubre.component.scss']
+  selector: "app-descubre",
+  templateUrl: "./descubre.component.html",
+  styleUrls: ["./descubre.component.scss"],
 })
 export class DescubreComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private dataService: DataService) {}
+  contenidos;
   ngOnInit(): void {
+    this.dataService
+      .getAllContents()
+      .toPromise()
+      .then((resp) => {
+        this.contenidos = resp["data"]["data"];
+      });
   }
 
+  agregar(id, category) {
+    this.dataService
+      .addContentPreference(id, category)
+      .toPromise()
+      .then((resp) => {
+        console.log("Agregado");
+      });
+  }
 }

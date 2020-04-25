@@ -1,1 +1,26 @@
-<p>descubre works!</p>
+<div class="row justify-content-center">
+  <h3 class="text-center mb-5">Favoritas</h3>
+  <div class="col-12 row bg-white m-auto">
+    <div
+      class="card rounded bg-light m-2"
+      *ngFor="let contenido of contenidos"
+      style="width: 48%;"
+    >
+      <div id="contenido.id" class="card-body rounded">
+        <h6>
+          <b>{{ contenido.name }}</b>
+        </h6>
+        <p>
+          <b>{{ contenido.category }}</b>
+        </p>
+        <p>{{ contenido.description }}</p>
+        <button
+          class="btn btn-success"
+          (click)="agregar(contenido._id, contenido.category)"
+        >
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

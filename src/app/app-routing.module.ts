@@ -1,57 +1,105 @@
 import { ExtraOptions, RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
-import {
-  NbAuthComponent,
-  NbLoginComponent,
-  NbLogoutComponent,
-  NbRegisterComponent,
-  NbRequestPasswordComponent,
-  NbResetPasswordComponent,
-} from "@nebular/auth";
-import { NotFoundComponent } from "./pages/miscellaneous/not-found/not-found.component";
-import { LandingPageComponent } from "./pages/landing/landingpage.component";
+import { NotFoundComponent } from "./notFound/not-found.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { InicioComponent } from "./pages/inicio/inicio.component";
+import { DescubreComponent } from "./pages/descubre/descubre.component";
+import { FavoritasComponent } from "./pages/favoritas/favoritas.component";
+import { GuruhsComponent } from "./pages/guruhs/guruhs.component";
+import { RecomendacionesComponent } from "./pages/recomendaciones/recomendaciones.component";
+import { EstadisticasComponent } from "./pages/estadisticas/estadisticas.component";
+import { CalendarioComponent } from "./pages/calendario/calendario.component";
+import { ChatComponent } from "./pages/chat/chat.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { SignupComponent } from "./auth/signup/signup.component";
+import { ForgotPasswordComponent } from "./auth/forgot-password/forgot-password.component";
+import { ResetPasswordComponent } from "./auth/reset-password/reset-password.component";
+import { LoginGuardian } from "./services/loginGuardian.service";
+import { CuentaComponent } from "./cuenta/cuenta.component";
 
 export const routes: Routes = [
   {
-    path: "auth",
-    component: NbAuthComponent,
+    path: "",
+    redirectTo: "inicio",
+    pathMatch: "full",
+  },
+  {
+    path: "login",
+    component: LoginComponent,
+  },
+  {
+    path: "signup",
+    component: SignupComponent,
+  },
+  {
+    path: "forgotpassword",
+    component: ForgotPasswordComponent,
+  },
+  {
+    path: "resetpassword",
+    component: ResetPasswordComponent,
+  },
+  {
+    path: "",
+    component: DashboardComponent,
+    canActivate: [LoginGuardian],
     children: [
       {
-        path: "",
-        component: NbLoginComponent,
+        path: "inicio",
+        component: InicioComponent,
+        canActivate: [LoginGuardian],
       },
       {
-        path: "login",
-        component: NbLoginComponent,
+        path: "descubre",
+        component: DescubreComponent,
+        canActivate: [LoginGuardian],
       },
       {
-        path: "register",
-        component: NbRegisterComponent,
+        path: "favoritas",
+        component: FavoritasComponent,
+        canActivate: [LoginGuardian],
       },
       {
-        path: "logout",
-        component: NbLogoutComponent,
+        path: "guruhs",
+        component: GuruhsComponent,
+        canActivate: [LoginGuardian],
       },
       {
-        path: "request-password",
-        component: NbRequestPasswordComponent,
+        path: "recomendaciones",
+        component: RecomendacionesComponent,
+        canActivate: [LoginGuardian],
       },
       {
-        path: "reset-password",
-        component: NbResetPasswordComponent,
+        path: "estadisticas",
+        component: EstadisticasComponent,
+        canActivate: [LoginGuardian],
+      },
+      {
+        path: "calendario",
+        component: CalendarioComponent,
+        canActivate: [LoginGuardian],
+      },
+      {
+        path: "chat",
+        component: ChatComponent,
+        canActivate: [LoginGuardian],
+      },
+      {
+        path: "cuenta",
+        component: CuentaComponent,
+        canActivate: [LoginGuardian],
+      },
+      {
+        path: "**",
+        component: NotFoundComponent,
+        canActivate: [LoginGuardian],
       },
     ],
   },
   {
-    path: "prueba",
-    component: LandingPageComponent,
+    path: "**",
+    component: NotFoundComponent,
   },
-  {
-    path: "",
-    loadChildren: () =>
-      import("./pages/pages.module").then((m) => m.PagesModule),
-  },
-  { path: "**", component: NotFoundComponent },
 ];
 
 const config: ExtraOptions = {
