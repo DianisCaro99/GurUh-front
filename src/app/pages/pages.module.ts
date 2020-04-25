@@ -5,7 +5,6 @@ import { PagesComponent } from "./pages.component";
 import { ECommerceModule } from "./e-commerce/e-commerce.module";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { MiscellaneousModule } from "./miscellaneous/miscellaneous.module";
-import { InicioComponent } from "./inicio/inicio.component";
 import { DescubreComponent } from "./descubre/descubre.component";
 import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
@@ -13,6 +12,7 @@ import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
 import { RecomendacionesModule } from './recomendaciones/recomendaciones.module';
 import { ChatFinalModule } from './chat/chat.module';
+import { InicioModule } from './inicio/inicio.module';
 
 @NgModule({
   imports: [
@@ -23,10 +23,10 @@ import { ChatFinalModule } from './chat/chat.module';
     RecomendacionesModule,
     MiscellaneousModule,
     ChatFinalModule,
+    InicioModule,
   ],
   declarations: [
     PagesComponent,
-    InicioComponent,
     DescubreComponent,
     FavoritasComponent,
     GuruhsComponent,
