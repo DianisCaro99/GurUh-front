@@ -37,15 +37,15 @@ export class DescubreComponent implements OnInit {
     }, 
     
     columns: {
-      
+      category: {
+        title: "Categoría",
+        type: "string",
+      }, 
       name: {
         title: "Nombre",
         type: "string",
       },
-      category: {
-        title: "Categoría",
-        type: "string",
-      },
+     
       description: {
         title: "Descripción",
         type: "string",
