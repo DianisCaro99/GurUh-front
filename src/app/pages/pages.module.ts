@@ -6,9 +6,10 @@ import { ECommerceModule } from "./e-commerce/e-commerce.module";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { MiscellaneousModule } from "./miscellaneous/miscellaneous.module";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
-import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
 import { RecomendacionesModule } from './recomendaciones/recomendaciones.module';
+
+import { EstadisticasModule } from './estadisticas/estadisticas.module';
 import { ChatFinalModule } from './chat/chat.module';
 import { InicioModule } from './inicio/inicio.module';
 
@@ -19,6 +20,7 @@ import { InicioModule } from './inicio/inicio.module';
     NbMenuModule,
     ECommerceModule,
     RecomendacionesModule,
+    EstadisticasModule,
     MiscellaneousModule,
     ChatFinalModule,
     InicioModule,
@@ -26,7 +28,6 @@ import { InicioModule } from './inicio/inicio.module';
   declarations: [
     PagesComponent,
     GuruhsComponent,
-    EstadisticasComponent,
     CalendarioComponent,
   ],
 })
