@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { LocalDataSource } from "ng2-smart-table";
 
 import { ContentDataService } from "../../../services/content.data.service";
+import { CustomRendererComponent } from './custom.component';
 
 @Component({
   selector: "ngx-favoritos",
@@ -20,33 +21,29 @@ export class FavoritosComponent implements OnInit {
       });
   }
   settings = {
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
+    actions: {
+      columnTitle: 'Eliminar',
+      add:false,
+      edit:false,
+
+  
+    
+    }, 
+    
     columns: {
-      _id: {
-        title: "Id",
-        type: "String",
-      },
-      name: {
-        title: "nombre",
-        type: "string",
-      },
       category: {
         title: "Categoría",
         type: "string",
+      }, 
+      name: {
+        title: "Nombre",
+        type: "string",
       },
+     
       description: {
         title: "Descripción",
         type: "string",
@@ -56,8 +53,9 @@ export class FavoritosComponent implements OnInit {
         type: "string",
       },
       url: {
-        title: "Url",
-        type: "string",
+        title:"URL",
+        type: 'custom',
+        renderComponent: CustomRendererComponent,
       },
     },
   };
@@ -73,8 +71,9 @@ export class FavoritosComponent implements OnInit {
       });
   }
 
+  
   onDeleteConfirm(event): void {
-    if (window.confirm("Are you sure you want to delete?")) {
+    if (window.confirm("OnDeleteConfirm: Acá toca llamar el método del back")) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
