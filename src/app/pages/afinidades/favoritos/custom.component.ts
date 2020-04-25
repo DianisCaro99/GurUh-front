@@ -3,7 +3,7 @@ import { ViewCell } from 'ng2-smart-table';
 
 @Component({
   template: `
-    <a href={value}} target="_blank" rel="noopener noreferrer" >{{ value }}</a>
+    <a href={{value}} target="_blank" rel="noopener noreferrer" >{{ value }}</a>
   `,
 })
 export class CustomRendererComponent implements ViewCell {
