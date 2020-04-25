@@ -4,11 +4,11 @@ import { LocalDataSource } from "ng2-smart-table";
 import { ContentDataService } from "../../../services/content.data.service";
 
 @Component({
-  selector: "ngx-smart-table",
-  templateUrl: "./smart-table.component.html",
-  styleUrls: ["./smart-table.component.scss"],
+  selector: "ngx-favoritos",
+  templateUrl: "./favoritos.component.html",
+  styleUrls: ["./favoritos.component.scss"],
 })
-export class SmartTableComponent implements OnInit {
+export class FavoritosComponent implements OnInit {
   ngOnInit() {
     console.log("entra acá");
 

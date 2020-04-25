@@ -2,13 +2,14 @@ import { Component, OnInit } from "@angular/core";
 import { LocalDataSource } from "ng2-smart-table";
 
 import { ContentDataService } from "../../../services/content.data.service";
+import { CustomRendererComponent } from './custom.component';
 
 @Component({
-  selector: "ngx-smart-table",
-  templateUrl: "./smart-table.component.html",
-  styleUrls: ["./smart-table.component.scss"],
+  selector: "ngx-descubre",
+  templateUrl: "./descubre.component.html",
+  styleUrls: ["./descubre.component.scss"],
 })
-export class SmartTableComponent implements OnInit {
+export class DescubreComponent implements OnInit {
   ngOnInit() {
     console.log("entra acá");
 
@@ -20,27 +21,25 @@ export class SmartTableComponent implements OnInit {
       });
   }
   settings = {
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    delete: {
-      deleteButtonContent: '<i class="nb-trash"></i>',
-      confirmDelete: true,
-    },
+    actions: {
+      columnTitle: 'Marcar',
+      add:false,
+      edit:false,
+      delete:false,
+    
+      custom:[
+        {
+          name: 'favorito',
+          title:'<i class="ion-star" title="Favorite"></i>',
+          position: 'right'
+        },
+      ]
+    }, 
+    
     columns: {
-      _id: {
-        title: "Id",
-        type: "String",
-      },
+      
       name: {
-        title: "nombre",
+        title: "Nombre",
         type: "string",
       },
       category: {
@@ -56,8 +55,9 @@ export class SmartTableComponent implements OnInit {
         type: "string",
       },
       url: {
-        title: "Url",
-        type: "string",
+        title:"URL",
+        type: 'custom',
+        renderComponent: CustomRendererComponent,
       },
     },
   };
@@ -72,7 +72,11 @@ export class SmartTableComponent implements OnInit {
         this.source.load(res["data"]["data"]);
       });
   }
+  onCustomAction(event) {
+    console.log(event)
+  }
 
+  
   onDeleteConfirm(event): void {
     if (window.confirm("Are you sure you want to delete?")) {
       event.confirm.resolve();

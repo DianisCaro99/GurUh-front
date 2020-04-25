@@ -14,12 +14,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: "Descubre",
         icon: "plus-circle-outline",
-        link: "/descubre",
+        link: "/afinidades/descubre",
       },
       {
         title: "Favoritas",
         icon: "star-outline",
-        link: "/favoritas",
+        link: "/afinidades/favoritos",
       },
     ],
   },

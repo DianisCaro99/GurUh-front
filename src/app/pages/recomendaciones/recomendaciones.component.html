@@ -16,7 +16,7 @@
     </nb-card-body>
 
     <nb-card-body *ngIf="this.recomendacion">
-      Tu personalidad según nuestro modelo: 
+      Tu personalidad según nuestro modelo {{this.username}}: 
       <br>
       <br>
       Openness: {{this.recomendacion["Openness"].toFixed(2)}}

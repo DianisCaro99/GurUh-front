@@ -5,8 +5,6 @@ import { PagesComponent } from "./pages.component";
 import { ECommerceComponent } from "./e-commerce/e-commerce.component";
 import { NotFoundComponent } from "./miscellaneous/not-found/not-found.component";
 import { InicioComponent } from "./inicio/inicio.component";
-import { DescubreComponent } from "./descubre/descubre.component";
-import { FavoritasComponent } from "./favoritas/favoritas.component";
 import { GuruhsComponent } from "./guruhs/guruhs.component";
 import { EstadisticasComponent } from "./estadisticas/estadisticas.component";
 import { CalendarioComponent } from "./calendario/calendario.component";
@@ -68,16 +66,9 @@ const routes: Routes = [
         component: InicioComponent,
       },
       {
-        path: "descubre",
-        component: DescubreComponent,
-      },
-      {
-        path: "favoritas",
-        component: FavoritasComponent,
-      },
-      {
-        path: "guruhs",
-        component: GuruhsComponent,
+        path: "afinidades",
+        loadChildren: () =>
+          import("./afinidades/afinidades.module").then((m) => m.AfinidadesModule),
       },
       {
         path: "recomendaciones",
