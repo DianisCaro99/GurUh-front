@@ -43,7 +43,7 @@ import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 import { AuthService } from "./services/auth.service";
 import { LoginGuardian } from "./services/loginGuardian.service";
-import { CuentaComponent } from "./cuenta/cuenta.component";
+import { CuentaComponent } from "./pages/cuenta/cuenta.component";
 import { Ng2SmartTableModule } from "ng2-smart-table";
 
 @NgModule({

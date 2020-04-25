@@ -15,7 +15,7 @@ import { SignupComponent } from "./auth/signup/signup.component";
 import { ForgotPasswordComponent } from "./auth/forgot-password/forgot-password.component";
 import { ResetPasswordComponent } from "./auth/reset-password/reset-password.component";
 import { LoginGuardian } from "./services/loginGuardian.service";
-import { CuentaComponent } from "./cuenta/cuenta.component";
+import { CuentaComponent } from "./pages/cuenta/cuenta.component";
 
 export const routes: Routes = [
   {
