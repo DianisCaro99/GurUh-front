@@ -1,23 +1,57 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
 @Injectable()
 export class AuthService {
-  url = "http://3.93.242.234:3000/api/v1/";
-  token = localStorage.getItem("jwtGuruhApp");
+  url = "http://127.0.0.1:3000/api/v1/";
+  token = this.getTokenCookie();
   constructor(private http: HttpClient) {}
 
-  signup(user) {
-    return this.http.post(this.url + "users/signup", user);
+  getTokenCookie() {
+    let token;
+    document.cookie.split(";").forEach((el) => {
+      if (el.startsWith("jwtGuruhApp")) {
+        token = el.split("=")[1];
+      }
+    });
+    return token;
+  }
+
+  async signup(user) {
+    const resp = await this.http
+      .post(this.url + "users/signup", user)
+      .toPromise();
+    if (resp["token"]) {
+      this.token = resp["token"];
+      document.cookie = `jwtGuruhApp=${resp["token"]}; expires=${resp["expiresUTC"]}; path=/;`;
+    }
+    return resp;
   }
 
   async login(user) {
     const resp = await this.http
-      .request("POST", this.url + "users/login", { body: user })
+      .post(this.url + "users/login", user)
       .toPromise();
     if (resp["token"]) {
       this.token = resp["token"];
-      localStorage.setItem("jwtGuruhApp", resp["token"]);
+      document.cookie = `jwtGuruhApp=${resp["token"]}; expires=${resp["expiresUTC"]}; path=/;`;
+    }
+    return resp;
+  }
+
+  async forgotPassword(user) {
+    return await this.http
+      .post(this.url + "users/forgotPassword", user)
+      .toPromise();
+  }
+
+  async resetPassword(token, password) {
+    const resp = await this.http
+      .patch(this.url + "users/resetPassword/" + token, password)
+      .toPromise();
+    if (resp["token"]) {
+      this.token = resp["token"];
+      document.cookie = `jwtGuruhApp=${resp["token"]}; expires=${resp["expiresUTC"]}; path=/;`;
     }
     return resp;
   }
@@ -28,6 +62,6 @@ export class AuthService {
 
   logOut() {
     this.token = null;
-    localStorage.removeItem("jwtGuruhApp");
+    document.cookie = "jwtGuruhApp=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
   }
 }

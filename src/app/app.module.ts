@@ -3,7 +3,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import {
   HttpClientModule,
-  HttpHeaders,
   HttpClientJsonpModule,
 } from "@angular/common/http";
 import { CoreModule } from "./@core/core.module";
@@ -18,6 +17,17 @@ import {
   NbToastrModule,
   NbWindowModule,
   NbCardModule,
+  NbActionsModule,
+  NbCalendarKitModule,
+  NbCalendarModule,
+  NbUserModule,
+  NbCalendarRangeModule,
+  NbChatModule,
+  NbProgressBarModule,
+  NbSelectModule,
+  NbSpinnerModule,
+  NbListModule,
+  NbTabsetModule,
   NbButtonModule,
   NbInputModule,
   NbAlertModule,
@@ -25,9 +35,9 @@ import {
   NbIconModule,
   NbCheckboxModule,
   NbThemeService,
-  NbColorHelper,
   NbAccordionModule,
   NbStepperModule,
+  NbFormFieldModule,
 } from "@nebular/theme";
 import { LoginComponent } from "./auth/login/login.component";
 import { SignupComponent } from "./auth/signup/signup.component";
@@ -93,6 +103,18 @@ import { ChartModule } from "angular2-chartjs";
     NbLayoutModule,
     NbIconModule,
     NbCardModule,
+    NbFormFieldModule,
+    NbActionsModule,
+    NbCalendarKitModule,
+    NbCalendarModule,
+    NbUserModule,
+    NbCalendarRangeModule,
+    NbChatModule,
+    NbProgressBarModule,
+    NbSelectModule,
+    NbSpinnerModule,
+    NbListModule,
+    NbTabsetModule,
     NbButtonModule,
     RouterModule,
     FormsModule,
