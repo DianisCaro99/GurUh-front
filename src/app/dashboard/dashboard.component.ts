@@ -35,7 +35,7 @@ export class DashboardComponent {
       ],
     },
     {
-      title: "Guruhs",
+      title: "GurUhs",
       icon: "people-outline",
       link: "/guruhs",
       home: true,

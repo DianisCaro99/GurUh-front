@@ -29,7 +29,7 @@ export class DescubreComponent implements OnInit {
       custom: [
         {
           name: "favorito",
-          title: '<i class="ion-star" title="Favorite"></i>',
+          title: '<i class="nb-star" title="Favorite"></i>',
           position: "right",
         },
       ],

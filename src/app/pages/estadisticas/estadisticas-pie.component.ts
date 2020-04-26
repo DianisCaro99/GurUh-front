@@ -21,9 +21,9 @@ export class ChartjsPieComponent implements OnDestroy {
           {
             data: [300, 500, 100],
             backgroundColor: [
-              colors.primaryLight,
-              colors.infoLight,
-              colors.successLight,
+              "#FF9E2F",
+              "#FF6385",
+              "#44B7FF",
             ],
           },
         ],
