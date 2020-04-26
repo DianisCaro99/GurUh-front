@@ -35,7 +35,7 @@ export class ChatComponent {
       type: files.length ? 'file' : 'text',
       files: files,
       user: {
-        name: 'Nicolás P.',
+        name: '',
         avatar: 'https://i.gifer.com/no.gif',
       },
     });
