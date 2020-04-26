@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../../services/data.service";
+import { CustomRendererComponent } from "./custom.component";
 
 @Component({
   selector: "app-descubre",
@@ -8,22 +9,67 @@ import { DataService } from "../../services/data.service";
 })
 export class DescubreComponent implements OnInit {
   constructor(private dataService: DataService) {}
-  contenidos;
+  source;
   ngOnInit(): void {
     this.dataService
       .getAllContents()
       .toPromise()
       .then((resp) => {
-        this.contenidos = resp["data"]["data"];
+        this.source = resp["data"]["data"];
       });
   }
 
-  agregar(id, category) {
+  settings = {
+    actions: {
+      columnTitle: "Marcar",
+      add: false,
+      edit: false,
+      delete: false,
+
+      custom: [
+        {
+          name: "favorito",
+          title: '<i class="ion-star" title="Favorite"></i>',
+          position: "right",
+        },
+      ],
+    },
+
+    columns: {
+      category: {
+        title: "Categoría",
+        type: "string",
+      },
+      name: {
+        title: "Nombre",
+        type: "string",
+      },
+
+      description: {
+        title: "Descripción",
+        type: "string",
+      },
+      type: {
+        title: "Tipo",
+        type: "string",
+      },
+      url: {
+        title: "URL",
+        type: "custom",
+        renderComponent: CustomRendererComponent,
+      },
+    },
+  };
+
+  agregar(event) {
     this.dataService
-      .addContentPreference(id, category)
+      .addContentPreference(event.data._id, event.data.category)
       .toPromise()
       .then((resp) => {
-        console.log("Agregado");
+        alert("Guardado en favoritos");
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 }

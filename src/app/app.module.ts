@@ -24,6 +24,10 @@ import {
   NbLayoutModule,
   NbIconModule,
   NbCheckboxModule,
+  NbThemeService,
+  NbColorHelper,
+  NbAccordionModule,
+  NbStepperModule,
 } from "@nebular/theme";
 import { LoginComponent } from "./auth/login/login.component";
 import { SignupComponent } from "./auth/signup/signup.component";
@@ -45,6 +49,12 @@ import { AuthService } from "./services/auth.service";
 import { LoginGuardian } from "./services/loginGuardian.service";
 import { CuentaComponent } from "./pages/cuenta/cuenta.component";
 import { Ng2SmartTableModule } from "ng2-smart-table";
+import { RecomendacionesDataService } from "./services/recomendacion.data.service";
+import { ChartjsPieComponent } from "./pages/estadisticas/estadisticas-pie.component";
+import { ChartjsLineComponent } from "./pages/estadisticas/estadisticas-line.component";
+import { NgxEchartsModule } from "ngx-echarts";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { ChartModule } from "angular2-chartjs";
 
 @NgModule({
   declarations: [
@@ -64,6 +74,8 @@ import { Ng2SmartTableModule } from "ng2-smart-table";
     ChatComponent,
     NotFoundComponent,
     CuentaComponent,
+    ChartjsPieComponent,
+    ChartjsLineComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,8 +100,20 @@ import { Ng2SmartTableModule } from "ng2-smart-table";
     NbAlertModule,
     NbCheckboxModule,
     Ng2SmartTableModule,
+    ChartModule,
+    NgxChartsModule,
+    NgxEchartsModule,
+    NbAccordionModule,
+    NbStepperModule,
   ],
   bootstrap: [AppComponent],
-  providers: [DataService, AuthService, LoginGuardian, LoginGuardian],
+  providers: [
+    DataService,
+    AuthService,
+    LoginGuardian,
+    LoginGuardian,
+    RecomendacionesDataService,
+    NbThemeService,
+  ],
 })
 export class AppModule {}
