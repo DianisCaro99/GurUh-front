@@ -21,25 +21,23 @@ export class SignupComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
 
   signup(): void {
-    delete this.user.terms;
+    this.errors = [];
+    this.messages = [];
+    this.submitted = true;
+    delete this.user["terms"];
     this.authService
       .signup(this.user)
-      .toPromise()
-      .then((resp) => {
-        console.log("then", resp);
-        this.router.navigateByUrl("./inicio");
+      .then(() => {
+        this.router.navigate(["/inicio"]);
       })
       .catch((err) => {
-        console.log("err", err);
-        if (
-          err.message ==
-          'Duplicate field value: "cahupa99@gmail.com". Please use another value!'
-        ) {
-          this.messages.push("El correo ya se encuentra registrado");
-        } else
-          this.messages.push(
-            "Error desconocido, intenta nuevamente más tarde. :("
+        this.submitted = false;
+        this.showMessages.error = true;
+        if (err.error.message.startsWith("Duplicate field value:"))
+          this.errors.push(
+            "El correo que ingresaste ya se encuentra registrado. Por favor intenta con otro correo o inicia sesión."
           );
+        else this.errors.push("Error desconocido, intenta más tarde.");
       });
   }
 
