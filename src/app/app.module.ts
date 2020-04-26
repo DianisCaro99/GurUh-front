@@ -3,7 +3,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import {
   HttpClientModule,
-  HttpHeaders,
   HttpClientJsonpModule,
 } from "@angular/common/http";
 import { CoreModule } from "./@core/core.module";
@@ -38,6 +37,7 @@ import {
   NbThemeService,
   NbAccordionModule,
   NbStepperModule,
+  NbFormFieldModule,
 } from "@nebular/theme";
 import { LoginComponent } from "./auth/login/login.component";
 import { SignupComponent } from "./auth/signup/signup.component";
@@ -103,6 +103,7 @@ import { ChartModule } from "angular2-chartjs";
     NbLayoutModule,
     NbIconModule,
     NbCardModule,
+    NbFormFieldModule,
     NbActionsModule,
     NbCalendarKitModule,
     NbCalendarModule,
