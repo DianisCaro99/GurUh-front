@@ -73,12 +73,13 @@ export class DescubreComponent implements OnInit {
       });
   }
   onCustomAction(event) {
+    console.log(event)
     if (window.confirm("OnCustomAction: Acá se llama el método del back para añadir favoritos")) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
-    console.log(event)
+    
   }
 
   
