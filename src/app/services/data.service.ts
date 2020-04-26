@@ -4,7 +4,7 @@ import { AuthService } from "./auth.service";
 
 @Injectable()
 export class DataService {
-  url = "http://127.0.0.1:3000/api/v1/";
+  url = "http://3.93.242.234:3000/api/v1/";
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 

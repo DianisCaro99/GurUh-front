@@ -1,3 +1,4 @@
+
 <nb-card>
   <nb-card-header>
     <h1 class="text-center"><b>¡Bienvenido!</b></h1>
@@ -16,48 +17,39 @@
         <nb-accordion-item-body>
           <nb-stepper orientation="horizontal">
             <nb-step [label]="labelOne">
-              <ng-template #labelOne>First step</ng-template>
-              <h4>Step content #1</h4>
+              <ng-template #labelOne>Explora</ng-template>
+              <h4>Explora</h4>
               <p class="lorem">
-                Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing
-                break it down. Nullizzle sapien velizzle, my shizz pimpin',
-                shizzle my nizzle crocodizzle shut the shizzle up, gravida
-                vizzle, dang.
+                Da un vistazo a la sección afinidades/descubre, mira contenidos que te llamen la atención y selecciona tus favoritos
               </p>
               <button nbButton disabled nbStepperNext>prev</button>
               <button nbButton nbStepperNext>next</button>
             </nb-step>
             <nb-step [label]="labelTwo">
-              <ng-template #labelTwo>Second step</ng-template>
-              <h4>Step content #2</h4>
+              <ng-template #labelTwo>Conoce</ng-template>
+              <h4>Conoce</h4>
               <p class="lorem">
-                Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing
-                break it down. Nullizzle sapien velizzle, my shizz pimpin',
-                shizzle my nizzle crocodizzle shut the shizzle up, gravida
-                vizzle, dang.
-              </p>
+                 En la sección Guruhs podrás conocer a estudiantes que estan cursando carreras relacionadas a tus temas de interés,además de resolver dudas 
+                 frente a las carreras que ellos estudian.
+             </p>
               <button nbButton nbStepperPrevious>prev</button>
               <button nbButton nbStepperNext>next</button>
             </nb-step>
-            <nb-step label="Third step">
-              <h4>Step content #3</h4>
+            <nb-step label="Observa">
+              <h4>Observa</h4>
               <p class="lorem">
-                Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing
-                break it down. Nullizzle sapien velizzle, my shizz pimpin',
-                shizzle my nizzle crocodizzle shut the shizzle up, gravida
-                vizzle, dang.
+                 En la sección de recomendaciones puedes obtener una recomendación personalizada a partir de una análisis de tu usuario en la red social twitter.
               </p>
               <button nbButton nbStepperPrevious>prev</button>
               <button nbButton nbStepperNext>next</button>
             </nb-step>
             <nb-step [label]="labelFour">
-              <ng-template #labelFour>Fourth step</ng-template>
-              <h4>Step content #4</h4>
+              <ng-template #labelFour>Analiza</ng-template>
+              <h4>Analiza</h4>
               <p class="lorem">
-                Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing
-                break it down. Nullizzle sapien velizzle, my shizz pimpin',
-                shizzle my nizzle crocodizzle shut the shizzle up, gravida
-                vizzle, dang.
+                A partir de tus contenidos favoritos puedes observar estadísticas que indican con que áreas de conocimiento estan relacionados tus temas interés, estas están ubicadas en la 
+                sección estadísticas. 
+                Adicionalmente puedes observar fechas de inscripción importantes de varias universidades en nuestra sección calendario. 
               </p>
               <button nbButton nbStepperPrevious>prev</button>
               <button nbButton disabled nbStepperNext>next</button>
@@ -70,10 +62,19 @@
         <nb-accordion-item-header>
           Comienza a explorar tus intereses
         </nb-accordion-item-header>
-        <nb-accordion-item-body>
-          A nebula is an interstellar cloud of dust, hydrogen, helium and other
-          ionized gases. Originally, nebula was a name for any diffuse
-          astronomical object, including galaxies beyond the Milky Way.
+        <nb-accordion-item-body>  
+        <div class="row">
+          <div class="col-md-6 text-center" >
+            <img src={{imgname}} width="300px" height ="300px">
+          </div>
+          <div class="col-md-6">
+              <p>
+              A nebula is an interstellar cloud of dust, hydrogen, helium and other
+              ionized gases. Originally, nebula was a name for any diffuse
+              astronomical object, including galaxies beyond the Milky Way.
+            </p>
+          </div>
+        </div> 
         </nb-accordion-item-body>
       </nb-accordion-item>
 
@@ -82,9 +83,18 @@
           Contacta un estudiante de la carrera
         </nb-accordion-item-header>
         <nb-accordion-item-body>
-          A nebula is an interstellar cloud of dust, hydrogen, helium and other
-          ionized gases. Originally, nebula was a name for any diffuse
-          astronomical object, including galaxies beyond the Milky Way.
+          <div class="row">
+            <div class="col-md-6">
+                <p>
+                A nebula is an interstellar cloud of dust, hydrogen, helium and other
+                ionized gases. Originally, nebula was a name for any diffuse
+                astronomical object, including galaxies beyond the Milky Way.
+              </p>
+            </div>
+            <div class="col-md-6 text-center" >
+              <img src={{imgstudent}} width="300px" height ="300px">
+            </div>
+          </div> 
         </nb-accordion-item-body>
       </nb-accordion-item>
 
@@ -93,9 +103,18 @@
           Descubre posibles universidades
         </nb-accordion-item-header>
         <nb-accordion-item-body>
-          A nebula is an interstellar cloud of dust, hydrogen, helium and other
-          ionized gases. Originally, nebula was a name for any diffuse
-          astronomical object, including galaxies beyond the Milky Way.
+          <div class="row">
+            <div class="col-md-6 text-center" >
+              <img src={{imgschool}} width="300px" height ="300px">
+            </div>
+           <div class="col-md-6">
+                <p>
+                A nebula is an interstellar cloud of dust, hydrogen, helium and other
+                ionized gases. Originally, nebula was a name for any diffuse
+                astronomical object, including galaxies beyond the Milky Way.
+              </p>
+            </div>
+          </div> 
         </nb-accordion-item-body>
       </nb-accordion-item>
     </nb-accordion>
