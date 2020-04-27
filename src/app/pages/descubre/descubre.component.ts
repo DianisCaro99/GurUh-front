@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../../services/data.service";
 import { CustomRendererComponent } from "./custom.component";
+import { NbToastrService } from '@nebular/theme';
 
 @Component({
   selector: "app-descubre",
@@ -8,7 +9,7 @@ import { CustomRendererComponent } from "./custom.component";
   styleUrls: ["./descubre.component.scss"],
 })
 export class DescubreComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private toastr: NbToastrService) {}
   source;
   ngOnInit(): void {
     this.dataService
@@ -66,10 +67,10 @@ export class DescubreComponent implements OnInit {
       .addContentPreference(event.data._id, event.data.category)
       .toPromise()
       .then((resp) => {
-        alert("Guardado en favoritos");
+        this.toastr.show("Contenido agregado exitosamente a tus favoritos", "Éxito", {destroyByClick: true, preventDuplicates: true, status:"success", icon:"checkmark", iconPack:"eva"});
       })
       .catch((err) => {
-        console.log(err);
+        this.toastr.show("El contenido no pudo ser agregado correctamente, intenta nuevamente", "Error", {destroyByClick: true, preventDuplicates: true, status:"danger", icon:"alert-triangle", iconPack:"eva"});
       });
   }
 }

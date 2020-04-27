@@ -6,7 +6,6 @@ import {
   NbThemeService,
 } from "@nebular/theme";
 
-import { UserData } from "../../../@core/data/users";
 import { LayoutService } from "../../../@core/utils";
 import { map, takeUntil } from "rxjs/operators";
 import { Subject } from "rxjs";
@@ -25,6 +24,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = "default";
 
+  //Prueba-Cambio de Theme
+  lightTheme = true;
+
+  getInputType() {
+    if (this.lightTheme) 
+    {
+      this.changeTheme('default');
+    }
+    else
+    {
+      this.changeTheme('dark');
+    }
+  }
+
+  toggleTheme() {
+    this.lightTheme = !this.lightTheme;
+    this.getInputType();
+  }
+
   userMenu = [
     { title: "Cuenta", link: "/cuenta" },
     { title: "Cerrar sesión", link: "login" },
@@ -38,10 +56,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private layoutService: LayoutService,
     private breakpointService: NbMediaBreakpointsService,
     private router: Router
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
-    this.currentTheme = this.themeService.currentTheme;
+    this.toggleTheme();
 
     this.dataService
       .getMe()
@@ -64,6 +83,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe(
         (isLessThanXl: boolean) => (this.userPictureOnly = isLessThanXl)
       );
+
 
     this.themeService
       .onThemeChange()
