@@ -11,7 +11,7 @@ export class DataService {
   generateHeaderToken() {
     return {
       headers: new HttpHeaders({
-        authorization: "Bearer " + this.authService.token,
+        authorization: "Bearer " + this.authService.token, 
       }),
     };
   }
