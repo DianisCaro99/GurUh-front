@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { ChatService } from './chat.service';
 
 @Component({
-  selector: 'ngx-chat-final',
+  selector: 'ngx-chat',
   templateUrl: 'chat.component.html',
   styleUrls: ['chat.component.scss'],
   providers: [ ChatService ],
 })
-export class ChatComponentFinal {
+export class ChatComponent {
 
   ngOnInit(): void {
   }
@@ -35,7 +35,7 @@ export class ChatComponentFinal {
       type: files.length ? 'file' : 'text',
       files: files,
       user: {
-        name: 'Nicolás P.',
+        name: '',
         avatar: 'https://i.gifer.com/no.gif',
       },
     });

@@ -1,0 +1,46 @@
+<!-- <div class="row justify-content-center">
+  <h3 class="text-center mb-5">Favoritas</h3>
+  <div class="col-12 row bg-white m-auto">
+    <div
+      class="card rounded bg-light m-2"
+      *ngFor="let contenido of contenidos"
+      style="width: 48%;"
+    >
+      <div id="contenido.id" class="card-body rounded">
+        <h6>
+          <b>{{ contenido.name }}</b>
+        </h6>
+        <p>
+          <b>{{ contenido.category }}</b>
+        </p>
+        <p>{{ contenido.description }}</p>
+        <button
+          class="btn btn-success"
+          (click)="agregar(contenido._id, contenido.category)"
+        >
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+<nb-card>
+  <nb-card-header>
+    <h1>Descubre</h1>
+    <br>
+    <p>
+      Queremos que te acerques a las diferentes áreas de conocimiento y
+      descubras que contenidos te interesan!
+    </p>
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (custom)="agregar($event)"
+    >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

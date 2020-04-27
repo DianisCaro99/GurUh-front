@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { DataService } from "../../services/data.service";
 
 @Component({
-  selector: 'ngx-guruhs',
-  templateUrl: './guruhs.component.html',
-  styleUrls: ['./guruhs.component.scss']
+  selector: "app-guruhs",
+  templateUrl: "./guruhs.component.html",
+  styleUrls: ["./guruhs.component.scss"],
 })
 export class GuruhsComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private dataService: DataService) {}
+  guruhs;
   ngOnInit(): void {
+    this.dataService
+      .getAllStudents()
+      .toPromise()
+      .then((resp) => {
+        this.guruhs = resp["data"]["data"];
+      });
   }
-
 }

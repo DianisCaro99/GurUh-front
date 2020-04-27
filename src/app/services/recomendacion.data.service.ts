@@ -6,6 +6,6 @@ export class RecomendacionesDataService {
   constructor(private http: HttpClient) {}
 
   getRecomendaciones(username) {
-    return this.http.get("https://guruh.herokuapp.com/predict/"+username);
+    return this.http.get("https://guruh.herokuapp.com/predict/" + username);
   }
 }
