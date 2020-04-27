@@ -3,16 +3,15 @@
   <div class="col-12 row m-auto">
     <div
       *ngFor="let guruh of guruhs"
-      style="width: 33%;"
+      style="width: 50%;"
     >
       <div class="card-body">
         <nb-card size="tiny">
+          <nb-card-header><nb-icon icon="person-outline" status="warning"></nb-icon>  {{guruh.name}}</nb-card-header>
           <nb-card-body>
-            <nb-card-header><nb-icon icon="person-outline" status="warning"></nb-icon>  {{ guruh.name }} </nb-card-header>
-            <br />
-            <p>Correo: {{ guruh.email }}</p>
-            <p>Facultad: {{ guruh.faculty }}</p>
-            <p>Semestre: {{ guruh.semester }}</p>
+            <p>Correo: {{guruh.email}}</p>
+            <p>Facultad: {{guruh.faculty}}</p>
+            <p>Semestre: {{guruh.semester}}</p>
           </nb-card-body>
         </nb-card>
       </div>
