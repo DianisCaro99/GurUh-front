@@ -11,9 +11,18 @@
       decirnos algo sobre tus gustos e intereses.
     </nb-card-header>
     <nb-card-body>
+      <nb-alert
+      *ngIf="showMessages.error && errors?.length "
+      outline="danger"
+      role="alert"
+    >
+      <p class="alert-title">
+        <b>{{ errors[0] }}</b>
+      </p>
+    </nb-alert>
     <nb-form-field>
         <nb-icon nbPrefix icon="at-outline" pack="eva"></nb-icon>
-        <input type="text" nbInput fullWidth status="warning" placeholder="Ingresa tu username de twitter. El usuario debe ser público."
+        <input type="text" nbInput fullWidth status="warning" placeholder="Ingresa tu username de twitter. El perfíl debe ser público."
         #username/>
     </nb-form-field>
       <br />
@@ -23,39 +32,35 @@
     </nb-card-body>
 
     <nb-card-body *ngIf="this.recomendacion">
-      Tu personalidad según @{{ this.username.value }}:
+      
+      <h3><strong> Nuestra recomendación: {{ formatRecom(this.recomendacion["predict"] )}} </strong></h3>
+      <br/>
+      <br/>
+      ¿Por qué? Esta recomendación fue basada en estas características de tu personalidad:
+      <br/>
       <br />
+      <strong> Apertura : {{ (this.recomendacion["Openness"]*100).toFixed(2) }}%</strong> <br />
+      Muestra en qué grado una persona tiende a buscar nuevas experiencias
+      personales y concibe de una manera creativa tu futuro.
       <br />
-      Apertura a la Experiencia: <br />
-      Muestra en qué grado un sujeto tiende a buscar nuevas experiencias
-      personales y concibe de una manera creativa su futuro.
+      <br/>
+      <strong> Responsabilidad: {{ (this.recomendacion["Conscientiousness"]*100).toFixed(2) }}%</strong><br />
+      Se refiere a que tanta tendencia tiene una persona a actuar de forma organizada o meticulosa.
       <br />
-      {{ this.recomendacion["Openness"].toFixed(2) }}
-      <br />
-      Responsabilidad: <br />
-      Refiere a cuán centrado está el sujeto en sus objetivos, además de cuán
-      disciplinado se muestra para la consecución de dichos fines.
-      <br />{{ this.recomendacion["Conscientiousness"].toFixed(2) }}
-      <br />
-      Extraversión: <br />
-      Define el grado en que el sujeto se muestra abierto con los demás y
+      <br/>
+      <strong> Extraversión: {{ (this.recomendacion["Extraversion"]*100).toFixed(2) }}% </strong> <br />
+      Define el grado en que una persona se muestra abierto con los demás y
       canaliza su energía en contextos sociales.
-      <br />{{ this.recomendacion["Extraversion"].toFixed(2) }}
+     
       <br />
-      Amabilidad: <br />
-      Es el grado en que la persona se muestra respetuosa, tolerante y
-      tranquila.
+      <br/>
+      <strong> Simpatía: {{( this.recomendacion["Agreeableness"]*100).toFixed(2) }}% </strong><br />
+      Es el grado en que una persona se muestra compasiva y cooperadora con los demás. 
       <br />
-      {{ this.recomendacion["Agreeableness"].toFixed(2) }}
-      <br />
-      Estabilidad emocional: <br />
-      Define en qué grado una persona afronta sin problema las situaciones
-      complicadas de la vida.
-      <br />
-      {{ this.recomendacion["Neuroticism"].toFixed(2) }}
-      <br />
-      <br />
-      Nuestra recomendación: {{ this.recomendacion["predict"] }}
+      <br/>
+      <strong> Rango emocional:  {{ (this.recomendacion["Neuroticism"]*100).toFixed(2) }}%</strong> <br />
+      Es la magnitud en la que son sensibles las emociones de una persona a su entorno.
+      
     </nb-card-body>
   </nb-card>
 </div>
