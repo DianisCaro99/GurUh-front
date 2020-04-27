@@ -56,10 +56,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private layoutService: LayoutService,
     private breakpointService: NbMediaBreakpointsService,
     private router: Router
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
-    this.currentTheme = this.themeService.currentTheme;
+    this.toggleTheme();
 
     this.dataService
       .getMe()
