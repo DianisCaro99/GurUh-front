@@ -2,7 +2,6 @@
 <br>
 <p> Acá encontrarás la fecha en la que te gustó un contenido :)</p>
 <div class="row justify-content-center">
-<<<<<<< HEAD
   <h3 class="text-center mb-5">Favoritas</h3>
   <div class="col-12 row">
     <div
@@ -20,19 +19,6 @@
           </nb-card-body>
         </nb-card>
         </div>
-=======
-
-  <div class="col-12 row bg-white m-auto">
-    <div class="card rounded bg-light m-2" *ngFor="let contenido of misContenidos" style="width: 48%;">
-      <div class="card-body rounded">
-        <h6>{{ formatDate(contenido.date) }}</h6>
-        <p>{{ contenido.content.id }}</p>
-        <p>{{ contenido.content.category }}</p>
-        <button class="btn btn-danger" (click)="eliminar(contenido.content.id)">
-          Eliminar
-        </button>
-      </div>
->>>>>>> b18227920a1c1e73e454ef3a3bdf7b0dec4580c2
     </div>
   </div>
 </div>
