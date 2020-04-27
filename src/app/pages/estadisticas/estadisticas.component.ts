@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'ngx-chartjs',
-  styleUrls: ['./estadisticas.component.scss'],
-  templateUrl: './estadisticas.component.html',
+  selector: "app-estadisticas",
+  templateUrl: "./estadisticas.component.html",
+  styleUrls: ["./estadisticas.component.scss"],
 })
-export class EstadisticasComponent {}
+export class EstadisticasComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+}

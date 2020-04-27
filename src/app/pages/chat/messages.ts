@@ -22,7 +22,6 @@ export const messages = [
     reply: true,
     date: new Date(),
     user: {
-      name: 'Nicolás P.',
       avatar: 'https://i.gifer.com/no.gif',
     },
   },

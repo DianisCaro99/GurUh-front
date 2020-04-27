@@ -1,49 +1,61 @@
 <div>
-
-  <h1>Sabías que?...</h1>
-  <p>Los colombianos entre 16 y 24 años son los terceros en el mundo que más usan redes sociales al día?
-    En promedio usamos las redes 4 horas y 12 minutos.
+  <h1>¿Sabías que...?</h1>
+  <p>
+    Los colombianos entre 16 y 24 años son los terceros en el mundo que más usan
+    redes sociales al día... En promedio usamos las redes sociales 4 horas y 12 minutos.
   </p>
 
   <nb-card>
-    <nb-card-header>Quizá tu perfil de twitter sea una buena forma de empezar porque puede decirnos algo sobre tus
-      gustos y tus intereses :)</nb-card-header>
+    <nb-card-header>
+      Quizá tu perfil de Twitter sea una buena forma de empezar porque puede
+      decirnos algo sobre tus gustos e intereses.
+    </nb-card-header>
     <nb-card-body>
-      <input type="text" nbInput fullWidth status="info" placeholder="Ingresa tu username de twitter (debe ser público) " #username>
-      <button nbButton status="danger" hero (click)="recomendacionClick($event)">
-        Enviar
-      </button>
+    <nb-form-field>
+        <nb-icon nbPrefix icon="at-outline" pack="eva"></nb-icon>
+        <input type="text" nbInput fullWidth status="warning" placeholder="Ingresa tu username de twitter. El usuario debe ser público."
+        #username/>
+    </nb-form-field>
+      <br />
+        <button nbButton status="danger" hero (click)="recomendacionClick($event)">
+          Enviar
+        </button>
     </nb-card-body>
 
     <nb-card-body *ngIf="this.recomendacion">
-      Tu personalidad según nuestro modelo {{this.username.value}}: 
-      <br>
-      <br>
-      Apertura a la Experiencia: <br>
-      Muestra en qué grado un sujeto tiende a buscar nuevas experiencias personales y concibe de una manera creativa su futuro.
-      <br> {{this.recomendacion["Openness"].toFixed(2)}}
-      <br>
-      Responsabilidad: <br>
-      Refiere a cuán centrado está el sujeto en sus objetivos, además de cuán disciplinado se muestra para la consecución de dichos fines. 
-      <br>{{this.recomendacion["Conscientiousness"].toFixed(2)}}
-      <br>
-      Extraversión: <br>
-      Define el grado en que el sujeto se muestra abierto con los demás y canaliza su energía en contextos sociales. 
-      <br>{{this.recomendacion["Extraversion"].toFixed(2)}}
-      <br>
-      Amabilidad: <br>
-      Es el grado en que la persona se muestra respetuosa, tolerante y tranquila.
-      <br>
-      {{this.recomendacion["Agreeableness"].toFixed(2)}}
-      <br>
-      Estabilidad emocional: <br>
-      Define en qué grado una persona afronta sin problema las situaciones complicadas de la vida.
-      <br>
-      {{this.recomendacion["Neuroticism"].toFixed(2)}}
-      <br>
-      <br>
-      Nuestra recomendacion:      {{this.recomendacion["predict"]}}
+      Tu personalidad según @{{ this.username.value }}:
+      <br />
+      <br />
+      Apertura a la Experiencia: <br />
+      Muestra en qué grado un sujeto tiende a buscar nuevas experiencias
+      personales y concibe de una manera creativa su futuro.
+      <br />
+      {{ this.recomendacion["Openness"].toFixed(2) }}
+      <br />
+      Responsabilidad: <br />
+      Refiere a cuán centrado está el sujeto en sus objetivos, además de cuán
+      disciplinado se muestra para la consecución de dichos fines.
+      <br />{{ this.recomendacion["Conscientiousness"].toFixed(2) }}
+      <br />
+      Extraversión: <br />
+      Define el grado en que el sujeto se muestra abierto con los demás y
+      canaliza su energía en contextos sociales.
+      <br />{{ this.recomendacion["Extraversion"].toFixed(2) }}
+      <br />
+      Amabilidad: <br />
+      Es el grado en que la persona se muestra respetuosa, tolerante y
+      tranquila.
+      <br />
+      {{ this.recomendacion["Agreeableness"].toFixed(2) }}
+      <br />
+      Estabilidad emocional: <br />
+      Define en qué grado una persona afronta sin problema las situaciones
+      complicadas de la vida.
+      <br />
+      {{ this.recomendacion["Neuroticism"].toFixed(2) }}
+      <br />
+      <br />
+      Nuestra recomendación: {{ this.recomendacion["predict"] }}
     </nb-card-body>
-
   </nb-card>
 </div>
