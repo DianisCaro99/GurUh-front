@@ -6,7 +6,6 @@ import {
   NbThemeService,
 } from "@nebular/theme";
 
-import { UserData } from "../../../@core/data/users";
 import { LayoutService } from "../../../@core/utils";
 import { map, takeUntil } from "rxjs/operators";
 import { Subject } from "rxjs";
@@ -24,6 +23,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
   user: any;
 
   currentTheme = "default";
+
+  //Prueba-Cambio de Theme
+  lightTheme = true;
+
+  getInputType() {
+    if (this.lightTheme) 
+    {
+      this.changeTheme('default');
+    }
+    else
+    {
+      this.changeTheme('dark');
+    }
+  }
+
+  toggleTheme() {
+    this.lightTheme = !this.lightTheme;
+    this.getInputType();
+  }
 
   userMenu = [
     { title: "Cuenta", link: "/cuenta" },
@@ -64,6 +82,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe(
         (isLessThanXl: boolean) => (this.userPictureOnly = isLessThanXl)
       );
+
 
     this.themeService
       .onThemeChange()
