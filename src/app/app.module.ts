@@ -56,6 +56,7 @@ import { CalendarioComponent } from "./pages/calendario/calendario.component";
 import { NotFoundComponent } from "./notFound/not-found.component";
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AuthService } from "./services/auth.service";
 import { LoginGuardian } from "./services/loginGuardian.service";
 import { CuentaComponent } from "./pages/cuenta/cuenta.component";
@@ -102,6 +103,7 @@ import { ChartModule } from "angular2-chartjs";
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
     NbLayoutModule,
+    NbEvaIconsModule,
     NbIconModule,
     NbCardModule,
     NbFormFieldModule,

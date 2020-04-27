@@ -1,19 +1,21 @@
 <div class="row justify-content-center">
   <h3 class="text-center mb-5">Favoritas</h3>
-  <div class="col-12 row bg-white m-auto">
+  <div class="col-12 row">
     <div
-      class="card rounded bg-light m-2"
       *ngFor="let contenido of misContenidos"
-      style="width: 48%;"
-    >
-      <div class="card-body rounded">
-        <h6>{{ contenido.date }}</h6>
-        <p>{{ contenido.content.id }}</p>
-        <p>{{ contenido.content.category }}</p>
-        <button class="btn btn-danger" (click)="eliminar(contenido.content.id)">
-          Eliminar
-        </button>
-      </div>
+      style="width: 50%;">
+      <div style="width: 90%;">
+        <nb-card size="tiny">
+          <nb-card-header>{{ contenido.date | date }}</nb-card-header>
+          <nb-card-body>
+            <p>{{ contenido.content.id }}</p>
+            <p>{{ contenido.content.category }}</p>
+            <button class="btn btn-danger" (click)="eliminar(contenido.content.id)">
+              Eliminar
+            </button>
+          </nb-card-body>
+        </nb-card>
+        </div>
     </div>
   </div>
 </div>
