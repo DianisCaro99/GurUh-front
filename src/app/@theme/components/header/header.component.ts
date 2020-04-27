@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   currentTheme = "default";
 
   //Prueba-Cambio de Theme
-  lightTheme = true;
+  lightTheme = false;
 
   getInputType() {
     if (this.lightTheme) 
