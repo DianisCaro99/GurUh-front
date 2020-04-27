@@ -34,4 +34,10 @@ export class FavoritasComponent implements OnInit {
           });
       });
   }
+
+  formatDate(date)
+  {
+    let fecha= new Date(date);
+    return `${fecha.getDate()}/${fecha.getMonth() +1 }/ ${fecha.getFullYear()}`
+  }
 }
