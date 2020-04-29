@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class AuthService {
-  url = "http://3.93.242.234:3000/api/v1/";
+  url = "http://52.87.43.82:3000/api/v1/";
   token = this.getTokenCookie();
   constructor(private http: HttpClient) {}
 
