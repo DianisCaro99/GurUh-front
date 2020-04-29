@@ -3,6 +3,7 @@
     /* The image used */
     background-image: url("https://hdwallsource.com/img/2014/5/orange-sunset-30006-30725-hd-wallpapers.jpg");
 
+<<<<<<< HEAD
     /* Add the blur effect */
     filter: blur(8px);
     -webkit-filter: blur(8px);
@@ -18,20 +19,26 @@
 </style>
   <div class="bg-image"></div>
   
+=======
+
+>>>>>>> f08d02687390a213bd05a63691a1877ca2d1d12a
 <nb-card>
   <nb-card-header>
     <h1 class="text-center"><b>¡Bienvenido!</b></h1>
   </nb-card-header>
   <nb-card-body>
+    <div class="col-md-12 text-center" >
+      <img src={{imgLogo}} width="250px" height ="150px">
+    </div>
     <h6>
       Hola bienvenido a Guruh, gracias por confiar en nosotros. ¡Desde ya estás tomando las mejores decisiones! para empezar haz click en primeros pasos.
     </h6>
     <nb-accordion class="bg-dark">
-      <nb-accordion-item>
+      <nb-accordion-item expanded=true>
         <nb-accordion-item-header>
           Primeros pasos
         </nb-accordion-item-header>
-        <nb-accordion-item-body>
+        <nb-accordion-item-body> 
           <nb-stepper orientation="horizontal">
             <nb-step [label]="labelOne">
               <ng-template #labelOne>Explora</ng-template>

@@ -9,6 +9,7 @@ declare var require: any
   styleUrls: ["./inicio.component.scss"],
 })
 export class InicioComponent implements OnInit {
+  imgLogo= require("../../../assets/images/logo.png")
   imgname= require("../../../assets/images/buddha.png")
   imgstudent=require("../../../assets/images/student.png")
   imgschool=require("../../../assets/images/school.png")
