@@ -614,6 +614,7 @@ $theme:
     option-selected-text-color: text-primary-color,
     option-selected-hover-text-color: text-primary-color,
     option-selected-focus-text-color: text-primary-color,
+
 );
 
 $nb-themes: nb-register-theme($theme, dark, default);
