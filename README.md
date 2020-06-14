@@ -1,98 +1,128 @@
-# ngx-admin [<img src="https://i.imgur.com/oMcxwZ0.png" alt="Eva Design System" height="20px" />](https://hubs.ly/H0n4ZDy0) [![Build Status](https://travis-ci.org/akveo/ngx-admin.svg?branch=master)](https://travis-ci.org/akveo/ngx-admin) [![Dependency Status](https://david-dm.org/akveo/ngx-admin/status.svg)](https://david-dm.org/akveo/ng2-admin)
+[![Material Design for Bootstrap](https://mdbootstrap.com/wp-content/uploads/2018/03/admin-angular.png)](https://mdbootstrap.com/freebies/angular-admin-dashboard-template-angular-5-material-design/)
 
-[Who uses ngx-admin?](https://github.com/akveo/ngx-admin/issues/1645)| [Documentation](https://hubs.ly/H0n4Sfq0) | [Installation Guidelines](https://hubs.ly/H0n4Svc0)
+# Bootstrap 4 & Material Design - Angular Admin Dashboard Template
 
-# New! Material theme for ngx-admin
+Free, responsive Admin Dashboard template containing different styles of dashboards, data presentations, and numerous insightful components. Built with the newest Bootstrap 4, **Angular 5** and Material Design. MIT license – free for personal and commercial use. It's build with MDBootstrap - powerful and free UI Kit, containing **400+** material UI elements, **600+** material icons, **74** CSS animations, SASS files, templates, tutorials and many more.
 
-### Material admin theme is based on the most popular Angular dashboard template - [ngx-admin](https://hubs.ly/H0nJG1G0)
-### Included: Angular 9+, [Nebular](https://hubs.ly/H0nJG5g0) and [Eva design system](https://hubs.ly/H0nJGdC0). Free for personal and commercial usage.
-### Get material ngx-admin integrated with backend technology of your choice. [Check out our store](https://hubs.ly/H0n4Zvy0).
+________
 
-<a target="_blank" href="https://hubs.ly/H0nxM3b0"><img src="https://i.imgur.com/67YAlhf.png"/></a>
+# Live Previews: 
+## http://ng-admin.mdbootstrap.com/dashboards/v1
 
-## Key features
+# Most important features:
 
-- The most popular and trusted Angular open source dashboard template is out there. Used by hundreds of thousands developers worldwide and Fortune 500 companies*.
-- Over 40+ Angular Components and 60+ Usage Examples. Kick off your project and save money by using ngx-admin.
-- Already using ngx-admin and willing to switch to material theme? Material theme is backward-compatible. Check out the article describing how to do that.
-- ngx-admin material works perfectly with Angular Material and Nebular. Take the best from both!
+1. Build upon Bootstrap 4 & Angular 7 & MDB
 
-### To use material theme checkout `feat/material-theme` branch
+2. Plenty of useful components
 
-# Admin template based on Angular 9+ and <a href="https://github.com/akveo/nebular">Nebular</a>
-<a target="_blank" href="https://hubs.ly/H0n4Sw20"><img src="https://i.imgur.com/mFdqvgG.png"/></a>
+3. Easy installation
 
-### Backend Integration Bundles
-Easy way to integrate ngx-admin with backend (.NET, Node.js, Java etc.).
+4. Easy to use and customize
 
-<a target="_blank" href="https://hubs.ly/H0n4ZxC0">
-  <img src="https://i.imgur.com/Ywbs8cl.png"/>
-</a>
+5. Active community
 
-[Check out our Store](https://hubs.ly/H0n4Zvy0) for ready to use Backend Bundles.
+6. Dedicated support forum
 
-### With 6 stunning visual themes
+7. Fully responsive
+
+# Demo:  
+**Main demo**: http://ng-admin.mdbootstrap.com/dashboards/v1
+
+# Installation:
+
+**Install:** 
+npm i
+
+**Run:**
+ng serve -o
+
+**Test:**
+ng test 
+
+**Production Build:**
+ng build --prod
+
+**More info:**
+http://mdbootstrap.com/angular/getting-started/
+
+# FAQ
+http://mdbootstrap.com/angular/faq/
+
+# Support:
+http://mdbootstrap.com/forums/forum/support/
 
 
-#### Material Dark
-<a target="_blank" href="https://hubs.ly/H0nxM3b0"><img src="https://i.imgur.com/67YAlhf.png"/></a>
+# Angular 7 tutorial – creating an Angular Bootstrap app, step by step:
+## https://mdbootstrap.com/angular/angular-tutorial/
 
-#### Material Light
-<a target="_blank" href="https://hubs.ly/H0nxNmv0"><img src="https://i.imgur.com/aQzw0hD.png"/></a>
+# Additional tutorials:
 
-#### Default
-<a target="_blank" href="https://hubs.ly/H0n4Tgv0"><img src="https://i.imgur.com/Kn3xDKQ.png"/></a>
+**MDB - Bootstrap tutorial**: https://mdbootstrap.com/bootstrap-tutorial/
 
-#### Dark
-<a target="_blank" href="https://hubs.ly/H0n4Th20"><img src="https://i.imgur.com/FAn5iXY.png"/></a>
+**MDB - Wordpress tutorial**: https://mdbootstrap.com/wordpress-tutorial/
 
-#### Cosmic
-<a target="_blank" href="https://hubs.ly/H0n4Tj80"><img src="https://i.imgur.com/iJu2YDF.png"/></a>
+# Documentation:
 
-#### Corporate
-<a target="_blank" href="https://hubs.ly/H0n4TDQ0"><img src="https://i.imgur.com/GpUt6NW.png"/></a>
+**Huge, detailed documentation avilable online on**: https://mdbootstrap.com/angular
 
-### What's included:
+# PRO version:
 
-- Angular 9+ & Typescript
-- Bootstrap 4+ & SCSS
-- Responsive layout
-- RTL support
-- High resolution
-- Flexibly configurable themes with **hot-reload** (3 themes included)
-- Authentication module with multiple providers
-- 40+ Angular Components
-- 60+ Usage Examples
+**MDB Admin Template Pro (Angular version)**: https://mdbootstrap.com/products/angular-admin-dashboard/
 
-### Demo
+# Highlights:  
+**Bootstrap 4**  
+Thanks to MDB you can take advantage of all features of the newest Bootstrap 4 Stable
 
-<a target="_blank" href="https://hubs.ly/H0n4Tk70">Live Demo</a>
+**Free for personal and commercial use**  
+Our license is user-friendly. Feel free to use MDB for both private as well as commercial projects.   
 
-## Documentation
-This template is using [Nebular](https://github.com/akveo/nebular) modules set, [here you can find documentation and other useful articles](https://hubs.ly/H0n4ZPt0).
+**Fully responsive**  
+It doesn't matter whether your project will be displayed on desktop, laptop, tablet or mobile phone. MDB looks great on each screen.
 
-### Empty starter kit
-Don't need all the pages and modules and just looking for an empty starter kit for your next project? Check out our [starter-kit branch](https://github.com/akveo/ngx-admin/tree/starter-kit).
+**Technical support**  
+We really care about reliability. If you have any questions - do not hesitate to contact us.  
 
-## BrowserStack
-This project runs its tests on multiple desktop and mobile browsers using [BrowserStack](http://www.browserstack.com).
+**Active community**  
+Our society grows day by day. Visit **our forum** and check how it is to be a part of our family.  
 
-<img src="https://cloud.githubusercontent.com/assets/131406/22254249/534d889e-e254-11e6-8427-a759fb23b7bd.png" height="40" />
+**Flex box**  
+MDB fully suppports Flex Box. You can forget about alignment issues.  
 
-## More from Akveo
+**Latest Angular**  
+MDB is integrated with newest Angular 7, therefore you can use all the newest features which comes along with it.  
 
-- [Eva Icons](https://github.com/akveo/eva-icons) - 480+ beautiful Open Source icons
-- [Nebular](https://github.com/akveo/nebular) - Angular Components, Auth and Security
+**Detailed documentation:**  
+We give you detailed documentation at your disposal. It will help you to implement your ideas easily.  
 
-### How can I support developers?
-- Star our GitHub repo :star:
-- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
-- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
-- Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
+A big **thank you to all our users** who are working with us to improve the software. We wouldn't be where we are without you.  
 
-### Looking for engineering services? 
-Visit [our homepage](https://hubs.ly/H0n4YJt0) or simply leave us a message to [contact@akveo.com](mailto:contact@akveo.com). We will be happy to work with you!
+# Useful Links:  
 
-### From Developers
-Made with :heart: by [Akveo team](https://hubs.ly/H0n4YwQ0). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news first!
-We're always happy to receive your feedback!
+Getting started: https://mdbootstrap.com/angular/angular-bootstrap-getting-started/
+
+5 min quick start: https://mdbootstrap.com/angular/mdb-quick-start/  
+
+Material Design + Bootstrap Tutorial: https://mdbootstrap.com/bootstrap-tutorial/  
+
+Material Design + WordPress Tutorial: https://mdbootstrap.com/wordpress-tutorial/  
+
+Other Freebies: https://mdbootstrap.com/freebies/  
+
+Premium Templates: https://mdbootstrap.com/templates/  
+
+
+# Social Media:  
+
+Twitter: https://twitter.com/MDBootstrap  
+
+Facebook: https://www.facebook.com/mdbootstrap  
+
+Pinterest: https://pl.pinterest.com/mdbootstrap 
+
+Google+: https://plus.google.com/u/0/b/107863090883699620484/+Mdbootstrap/posts  
+
+Dribbble: https://dribbble.com/mdbootstrap
+
+LinkedIn: https://www.linkedin.com/company/material-design-for-bootstrap
+
+# Visit our website: https://mdbootstrap.com/

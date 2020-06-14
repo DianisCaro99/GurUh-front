@@ -1,0 +1,59 @@
+                    <!-- First row-->
+                    <div class="row">
+
+                        <!--First column-->
+                        <div class="col-md-3">
+                            <div class="text-center">
+
+                                <div mdbModal #frameTop="mdb-modal" class="modal fade top" id="frameModalBottom"
+                                     tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                     aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: false}">
+                                    <div class="modal-dialog modal-frame modal-top" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body text-center">
+                                                <div class="row px-4">
+                                                    <p class="pt-1 pr-2">Lorem ipsum dolor sit amet, consectetur
+                                                        adipisicing elit. Impedit nisi quo provident fugiat
+                                                        reprehenderit
+                                                        nostrum quos..</p>
+                                                    <button type="button" mdbBtn color="secondary" class="waves-light"
+                                                            data-dismiss="modal" (click)="frameTop.hide()"
+                                                            mdbWavesEffect>Close
+                                                    </button>
+                                                    <button type="button" mdbBtn color="primary" class="waves-light"
+                                                            mdbWavesEffect>Save changes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div mdbModal #frameBottom="mdb-modal" class="modal fade bottom" id="frameModalBottom"
+                                     tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                     aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: false}">
+                                    <div class="modal-dialog modal-frame modal-bottom" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body text-center">
+                                                <div class="row px-4">
+                                                    <p class="pt-1 pr-2">Lorem ipsum dolor sit amet, consectetur
+                                                        adipisicing elit. Impedit nisi quo provident fugiat
+                                                        reprehenderit
+                                                        nostrum quos..</p>
+                                                    <button type="button" mdbBtn color="secondary" class="waves-light"
+                                                            data-dismiss="modal" (click)="frameBottom.hide()"
+                                                            mdbWavesEffect>Close
+                                                    </button>
+                                                    <button type="button" mdbBtn color="primary" class="waves-light"
+                                                            mdbWavesEffect>Save changes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--First column-->
+                        
+                    </div>
+                    <!-- /.First row-->
